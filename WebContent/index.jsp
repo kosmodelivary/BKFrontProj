@@ -59,6 +59,7 @@
 		</div> 
 		-->
 		<div id="wrap" class="main">
+		<!-- header -->
 			<header id="header">
 		<h1 id="logo"><a href="index.jsp">버거킹</a></h1>
 		<div class="btn_gnb"><a href="#"><i></i><span>메뉴</span></a></div>
