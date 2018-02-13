@@ -38,8 +38,7 @@
 -->
 			</div>
 		</div>
-
-
+		
 		<div class="inner">
 			<nav id="gnb">
 				<ul>

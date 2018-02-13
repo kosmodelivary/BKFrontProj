@@ -33,6 +33,25 @@
 	</div>
 
 	<!-- 공통 안내 레이어 팝업 -->
-	<div id="popAlert" class="pop_bg"></div>
+	<div id="popAlert" class="pop_bg">
+		<article class="pop_wrap">
+			<header class="pop_head">
+				<h1>안내</h1>
+			</header>
+			<section class="pop_cont">
+				<div>
+					<div class="pt10 pb10 t_center">
+						<p class="f14" id="alert_msg"></p>
+					</div>
+					<p class="button_area mt10">
+						<a href="#" class="pop_close button btn_org w120">확인</a>
+					</p>
+				</div>
+			</section>
+			<footer class="pop_foot">
+				<a href="#" class="pop_close">팝업 닫기</a>
+			</footer>
+		</article>
+	</div>
 
 </footer>

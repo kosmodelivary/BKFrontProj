@@ -9,12 +9,7 @@
 <!--[if gt IE 9]><!-->
 <html lang="ko">
 <!--<![endif]-->
-
-
-<!-- Mirrored from delivery.burgerking.co.kr/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jan 2018 09:27:11 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!-- /Added by HTTrack -->
 <head>
 
 <meta charset="utf-8" />
@@ -27,39 +22,38 @@
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <meta name="keywords" content="버거킹 딜리버리" />
 <link rel="shortcut icon" type="image/x-icon"
-	href="resources/images/favicon.ico" />
-<link rel="stylesheet" media="all" href="resources/css/common.css" />
-<link rel="stylesheet" media="all" href="resources/css/contents.css" />
+	href="<c:url value='/resources/images/favicon.ico'/>" />
+<link rel="stylesheet" media="all" href="<c:url value='/resources/css/common.css'/>" />
+<link rel="stylesheet" media="all" href="<c:url value='/resources/css/contents.css'/>" />
 <!--[if lte IE 8]>
 		  <link rel="stylesheet" href="/resources/css/ie.css" />
 	<![endif]-->
 
 <script type="text/javascript"
-	src="resources/js/lib/jquery-1.12.4.min-4f252523d4af0b478c810c2547a63e19.js"></script>
+	src="<c:url value='/resources/js/lib/jquery-1.12.4.min-4f252523d4af0b478c810c2547a63e19.js'/>"></script>
 <script type="text/javascript"
-	src="resources/js/lib/jquery-migrate-1.4.1.min-7121994eec5320fbe6586463bf9651c2.js"></script>
+	src="<c:url value='/resources/js/lib/jquery-migrate-1.4.1.min-7121994eec5320fbe6586463bf9651c2.js'/>"></script>
 <script type="text/javascript"
-	src="resources/js/lib/jquery-ui-1.11.4.min-d935d506ae9c8dd9e0f96706fbb91f65.js"></script>
+	src="<c:url value='/resources/js/lib/jquery-ui-1.11.4.min-d935d506ae9c8dd9e0f96706fbb91f65.js'/>"></script>
 <script type="text/javascript"
-	src="resources/js/lib/modernizr-2.8.3.min-65f1d21d5fcc9d21da758adababd0c3c.js"></script>
+	src="<c:url value='/resources/js/lib/modernizr-2.8.3.min-65f1d21d5fcc9d21da758adababd0c3c.js'/>"></script>
 <!--[if lt IE 9]>
 		<script src="/resources/js/lib/html5shiv-3.7.3.js"></script>
 	<![endif]-->
 <script type="text/javascript"
-	src="resources/js/plugins-fc3d87aa7fbbb2aaf27be96df8e2bf72.js"></script>
+	src="<c:url value='/resources/js/plugins-fc3d87aa7fbbb2aaf27be96df8e2bf72.js'/>"></script>
 <script type="text/javascript"
-	src="resources/js/ui_script-9cf17ca67bee4a6db48a6ab65194e497.js"></script>
-
-<script src="resources/js/cntt-0f738f0aa2f2d3caa2e57a76a8bfc873.js"></script>
+	src="<c:url value='/resources/js/ui_script-9cf17ca67bee4a6db48a6ab65194e497.js'/>"></script>
+<script src="<c:url value='/resources/js/cntt-0f738f0aa2f2d3caa2e57a76a8bfc873.js'/>"></script>
 
 <!-- 사용자 스크립트 영역 -->
 
 </head>
 
 <body>
-	<div id="wrap" class="main">
+	<div id="wrap">
 		<!-- header -->
-		<jsp:include page="/template/Top.jsp"/>
+		<jsp:include page="/template/Top.jsp" />
 		<!-- //header -->
 		<!-- main -->
 		<div id="container">
@@ -220,30 +214,11 @@
 				}());
 			</script>
 		</div>
+		<!-- //contents -->
 		<!-- //main -->
 		<!-- footer -->
-		<jsp:include page="/template/Footer.jsp"/>
+		<jsp:include page="/template/Footer.jsp" />
 		<!-- //footer -->
-	</div>
-	<div id="popAlert" class="pop_bg">
-		<article class="pop_wrap">
-			<header class="pop_head">
-				<h1>안내</h1>
-			</header>
-			<section class="pop_cont">
-				<div>
-					<div class="pt10 pb10 t_center">
-						<p class="f14" id="alert_msg"></p>
-					</div>
-					<p class="button_area mt10">
-						<a href="#" class="pop_close button btn_org w120">확인</a>
-					</p>
-				</div>
-			</section>
-			<footer class="pop_foot">
-				<a href="#" class="pop_close">팝업 닫기</a>
-			</footer>
-		</article>
 	</div>
 </body>
 </html>
