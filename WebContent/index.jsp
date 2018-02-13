@@ -57,171 +57,9 @@
 </head>
 
 <body>
-	<div id="skipNavi">
-		<a href="#container">본문 바로가기</a> <a href="#gnb">주메뉴 바로가기</a> <a
-			href="#footer">사이트정보 바로가기</a>
-	</div>
-	<!-- 
-<div class="top_banner">
-	<div class="inner">
-		<a href="/menu/BreakFast"><img src="/resources/images/main/top_banner140126.jpg" alt="버거킹에서 아침을! 24시간 매장에서 즐겨보세요!" /></a>
-		<a href="#" class="btn_close">닫기</a>
-	</div>
-</div> 
--->
 	<div id="wrap" class="main">
 		<!-- header -->
-		<header id="header">
-			<h1 id="logo">
-				<a href="index.jsp">버거킹</a>
-			</h1>
-			<div class="btn_gnb">
-				<a href="#"><i></i><span>메뉴</span></a>
-			</div>
-			<div class="gnb_wrap">
-				<div class="head_util">
-					<div class="inner">
-						<ul>
-
-
-							<!-- 로그인 전 -->
-							<li><a href="member/login.html">로그인</a></li>
-							<li><a href="member/joinAgree.html">회원가입</a></li>
-							<!-- <li><a href="#none">주문확인</a></li>		 -->
-
-						</ul>
-						<!-- 로그인 후 -->
-						<!--
-<ul>
-	<li><a href="#" class="btn_logout">로그아웃</a>
-		<div class="layer_box logout_box">
-			<p>로그아웃하시겠습니까?
-				<a href="javascript:void(0);" id="logout_Btn">로그아웃</a>
-				<a href="#" class="logout_close">취소</a>
-			</p>
-			<i></i>
-		</div>
-	</li>	
-	<li><a href="/mypage">마이페이지</a></li>
-	주석 <li><a href="/mypage/myOrderList">주문확인</a></li>
-
-		
-</ul>
- 
--->
-					</div>
-				</div>
-
-
-				<div class="inner">
-					<nav id="gnb">
-						<ul>
-							<li class="gnb01"><a href="member/login.html">ORDER</a></li>
-							<li class="gnb02"><a href="menu/All.jsp" class="in_sub">MENU</a>
-								<ul id="menuClass">
-
-									<li><a href="https://www.burgerking.co.kr/nutrition"
-										target="_blank">영양정보</a></li>
-									<!-- <li><a href="#">스페셜오퍼</a></li>
-<li><a href="#">세트메뉴</a></li>
-<li><a href="#">버거</a></li>
-<li><a href="#">사이드</a></li>
-<li><a href="#">드링크</a></li>
-<li><a href="#">영양정보</a></li> -->
-								</ul></li>
-							<li class="gnb03"><a href="#" class="in_sub">STORE</a>
-								<ul>
-									<li><a href="#">배달매장찾기</a></li>
-								</ul></li>
-							<li class="gnb05"><a href="#" class="in_sub">FAQ</a>
-								<ul>
-									<li><a href="#">FQA</a></li>
-									<li><a href="#">공지사항</a></li>
-								</ul></li>
-						</ul>
-					</nav>
-					<div class="head_call">
-						<img class="w_img" src="resources/images/common/head_call.png"
-							alt="집에서 만나는 버거킹 1599-0505" /> <a href="#" class="m_img"><img
-							src="resources/images/main/main_call.png"
-							alt="집에서 만나는 버거킹 1599-0505" /></a>
-					</div>
-				</div>
-			</div>
-
-			<!-- 장바구니, 결제페이지는 장바구니 표시하지 않음 -->
-
-			<section class="cart_box" id="headerCart">
-
-				<a class="cart_btn" href="#"><i></i><span>장바구니</span><strong>0</strong></a>
-				<!-- 장바구니 페이지가 따로 있다. -->
-
-			</section>
-
-
-			<div class="gnb_bg"></div>
-			<!-- 시작] 기웅 확인, jquery 부분 아직 안해도됨 180205  -->
-			<!-- 	    장바구니는 주문하지 않은 상태에서 로그아웃하면 사라짐. -->
-			<script>
-				var headerObj = {};
-
-				var headerFunc = (function(hf) {
-
-					hf.init = function() {
-
-						// 모바일 화면일 때 GNB 메뉴 로드
-						if ($(".btn_gnb").css('display') == "block") {
-							$('#menuClass').getLoad('/menu/getHeaderMenuClass');
-						}
-
-						// 헤더 장바구니 갱신
-						this.loadHeaderCart();
-					};
-
-					// 로그아웃 처리
-					hf.logoutProcess = function() {
-						cntt.ajax.get('/member/logoutProcess', function(
-								response) {
-							cntt.goPage("index.html");
-						});
-					};
-
-					// 헤더 장바구니 갱신
-					hf.loadHeaderCart = function(open) {
-						$('#headerCart').getLoad('/common/headerCart',
-								function() {
-									if (open == 'Y')
-										$('.cart_btn').click();
-								});
-					}
-
-					// 장바구니 제품 삭제
-					hf.deleteProduct = function(groupNo) {
-						cntt.ajax.post('/cart/deleteProduct', {
-							groupNoList : [ groupNo ]
-						}, function(response) {
-							if (response) {
-								headerFunc.loadHeaderCart('Y'); //장바구니 갱신
-							}
-						});
-					}
-
-					return hf;
-				}(window.hf || {}));
-
-				// 이벤트
-				$(function() {
-					headerFunc.init();
-
-					// 로그아웃 버튼 클릭
-					$('#logout_Btn').on('click', function(event) {
-						headerFunc.logoutProcess();
-					});
-
-				}());
-			</script>
-			<!-- 끝] 기웅 확인, jquery 부분 아직 안해도됨 180205  -->
-		</header>
+		<jsp:include page="/template/Top.jsp"/>
 		<!-- //header -->
 		<!-- main -->
 		<div id="container">
@@ -677,7 +515,7 @@
 				</div>
 				<!-- //자세히 보기 -->
 			</section>
-			<!-- 시작] 기웅 캐러셀과 캐러셀에 건 링크에 관련된 jquery 180205 -->
+			<!-- 시작] 기웅 캐러셀과 캐러셀에 건 링크, 버거 링크에 관련된 jquery 180205 -->
 			<!-- //contents -->
 			<script type="text/javascript">
 				// page parameter
@@ -782,61 +620,11 @@
 					});
 				}());
 			</script>
-			<!-- 시작] 기웅 캐러셀과 캐러셀에 건 링크에 관련된 jquery 180205 -->
+			<!-- 끝] 기웅 캐러셀과 캐러셀에 건 링크에 관련된 jquery 180205 -->
 		</div>
-		<!-- 
-<div layout:fragment="popup"></div>
-<article id="pop_main" class="pop_wrap pop_layer pop_main" data-end="20161231">
-	<div class="img">
-		<img src="/resources/images/popup/pop_main_20160913.jpg" alt="버거킹 딜리버리킹서비스 추석연휴 영업안내" />
-	</div>
-	<a href="#" class="btn_close pop_close">닫기</a>
-	<p class="chk_wrap">
-		<label>
-			<input type="checkbox" class="checkbox todayChk" />
-			<span class="lbl">오늘은 그만보기</span>
-		</label>
-		<a href="#" class="pop_close">CLOSE</a>
-	</p>
-</article>
--->
 		<!-- //main -->
 		<!-- footer -->
-		<footer id="footer">
-			<div class="foot_util">
-				<div class="inner">
-					<ul>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">이용약관</a></li>
-						<li><a href="#">개인정보처리방침</a></li>
-						<li><a href="#">사이트맵</a></li>
-						<li><a href="#">공지사항</a></li>
-						<!-- <li><a href="#">사이버상담실</a></li> -->
-						<!-- <li><a href="#">법적고지</a></li> -->
-						<!-- <li><a href="#">브랜드사이트</a></li> -->
-					</ul>
-				</div>
-			</div>
-			<div class="inner">
-				<div class="copyright">
-					<p>
-						<strong>Copyright 2012 BKR Co., Ltd. All right Reserved</strong>
-					</p>
-					<p>
-						<span>(주)BKR</span> <span>대표이사 문영주</span> <span>사업자 등록번호
-							101-86-76277</span> <span>서울 종로구 삼봉로 71 G 타워 2층</span> <span>주식회사
-							비케이알</span>
-					</p>
-					<p>
-						<span>TEL 02-6331-8282</span> <span>FAX 02-3775-4325</span>
-					</p>
-				</div>
-			</div>
-
-			<!-- 공통 안내 레이어 팝업 -->
-			<div id="popAlert" class="pop_bg"></div>
-
-		</footer>
+		<jsp:include page="/template/Footer.jsp"/>
 		<!-- //footer -->
 	</div>
 </body>
