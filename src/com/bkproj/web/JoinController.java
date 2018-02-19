@@ -10,4 +10,14 @@ public class JoinController {
 		
 		return "/member/joinAgree.jsp";
 	}
+	@RequestMapping("/member/login.whpr")
+	public String login() throws Exception{
+		
+		return "/member/login.jsp";
+	}
+	@RequestMapping("/member/searchIdPassword.whpr")
+	public String searchIDPW() throws Exception{
+		
+		return "/member/searchIdPassword.jsp";
+	}
 }

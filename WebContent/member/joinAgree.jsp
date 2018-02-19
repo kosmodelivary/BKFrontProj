@@ -2,30 +2,20 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-
 		<!-- header -->
 		<jsp:include page="/template/Top.jsp"/>
 		<!-- //header -->
 			
 			<div id="container">
-		<!-- lnb -->
-		<aside id="lnb">
-		<h1><img src="../resources/images/common/tit_members.png" alt="버거킹 회원" /></h1>
-		<nav>
-			<ul>
-				<li><a href="login.html">로그인</a></li>
-				<li><a href="<c:url value='/member/joinAgree.whpr'/>">회원가입</a></li>
-				<li><a href="searchIdPassword.html">아이디/비밀번호 찾기</a></li>
-				<li><a href="../order/nonMemberOrder.html">비회원주문</a></li>
-			</ul>
-		</nav>
-	</aside>
-		<!-- //lnb -->
+			
+		<!-- left -->
+		<jsp:include page="/template/Left.jsp"/>
+		<!-- //left -->
 
 		<!-- contents -->
 		<section id="contents">
 			<ul id="location">
-				<li><a class="home" href="../index.html">HOME</a></li>
+				<li><a class="home" href="../index.jsp">HOME</a></li>
 				<li><span>버거킹 회원</span></li>
 				<li><strong>회원가입</strong></li>
 			</ul>

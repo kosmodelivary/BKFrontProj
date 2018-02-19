@@ -72,7 +72,7 @@
 					<div class="inner">
 						<ul>
 							<!-- 로그인 전 -->
-							<li><a href="member/login.whpr">로그인</a></li>
+							<li><a href="<c:url value='/member/login.whpr'/>">로그인</a></li>
 							<li><a href="<c:url value='/member/joinAgree.whpr'/>">회원가입</a></li>
 							<!-- <li><a href="#none">주문확인</a></li>		 -->
 						</ul>
