@@ -62,7 +62,7 @@
 	<div id="wrap">
 		<header id="header">
 			<h1 id="logo">
-				<a href="<c:url value='/index.jsp'/>">버거킹</a>
+				<a href="<c:url value='/home.whpr'/>">버거킹</a>
 			</h1>
 			<div class="btn_gnb">
 				<a href="#"><i></i><span>메뉴</span></a>
@@ -102,7 +102,7 @@
 					<nav id="gnb">
 						<ul>
 							<li class="gnb01"><a href="member/login.html">ORDER</a></li>
-							<li class="gnb02"><a href="menu/All.jsp" class="in_sub">MENU</a>
+							<li class="gnb02"><a href="<c:url value='/menu/All.whpr'/>" class="in_sub">MENU</a>
 								<ul id="menuClass">
 
 									<li><a href="https://www.burgerking.co.kr/nutrition"
@@ -114,7 +114,7 @@
 <li><a href="#">드링크</a></li>
 <li><a href="#">영양정보</a></li> -->
 								</ul></li>
-							<li class="gnb03"><a href="#" class="in_sub">STORE</a>
+							<li class="gnb03"><a href="<c:url value='/store/Search.whpr'/>" class="in_sub">STORE</a>
 								<ul>
 									<li><a href="#">배달매장찾기</a></li>
 								</ul></li>

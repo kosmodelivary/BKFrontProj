@@ -7,7 +7,7 @@
 <!-- ※ibatis와는 다르게 id값에 .(dot)를 사용 못한다. -->
 <mapper namespace="mybatis.BKProjFr_myBatis">
 
-  <!-- <resultMap id="ReplyBBSDtoResult" type="ReplyBBSDto">
+<!--   <resultMap id="ReplyBBSDtoResult" type="ReplyBBSDto">
     resultMap사용시 column속성 필수 
     <result property="no" column="no"/>
     <result property="id" column="id"/>
@@ -18,10 +18,14 @@
     <result property="step" column="step"/>
     <result property="depth" column="depth"/>
     <result property="name" column="name"/>
-  </resultMap>
+  </resultMap> -->
  
+	<!-- <select id="" parameterType="" resultMap="">
+		SELECT * FROM BK_STORE
+	</select> -->
 	
-	<select id="ReplyBBSlogin" parameterType="java.util.Map" resultType="int">
+	
+	<!-- <select id="ReplyBBSlogin" parameterType="java.util.Map" resultType="int">
 		SELECT COUNT(*) FROM MEMBER WHERE ID=#{id} AND PWD=#{pwd}
 	</select>
 	
