@@ -27,7 +27,7 @@
 		<h1>배달매장찾기</h1>
 	</div>
 
-	<h2 class="store_tit">노량진점</h2>
+	<h2 class="store_tit">${sdto.name }</h2>
 	<table class="table2 left_tbl">
 		<caption>매장상세정보</caption>
 		<colgroup>
@@ -39,16 +39,15 @@
 		<tbody>
 			<tr>
 				<th scope="row">주소</th>
-				<td>서울시 동작구 노량진동 151-11</td>
+				<td>${sdto.address }</td>
 				<th scope="row">전화번호</th>
-				<td><a href="tel:070-7462-8673">070-7462-8673<br /></a><a
-					href="tel:02-816-2176">02-816-2176<br /></a></td>
+				<td><a href="tel:070-7462-8673">${sdto.tel }</a></td>
 			</tr>
 			<tr>
 				<th scope="row">영업시간</th>
 				<td>
-					<p>주중:10:00~22:00</p>
-					<p>주말:10:00~22:00</p>
+					<p>주중:${sdto.weekdayon }:00~${sdto.weekdayoff }:00</p>
+					<p>주말:${sdto.weekendon }:00~${sdto.weekendoff }:00</p>
 				</td>
 				<th scope="row">매장상태</th>
 				<td>개점</td>
@@ -58,10 +57,9 @@
 	</table>
 	<div class="map_area mt20">
 
-		<div id="map"></div>
-
+	<div id="map"></div>
 		<script type="text/javascript"
-			src="../../dapi.kakao.com/v2/maps/sdkb8cc.json?appkey=115b7b387bc25ada55206e93884ad731"></script>
+			src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=7d0762c91ed93f00cf6d928deec8e3f5&libraries=services"></script>
 		<script>
 			var daumMap = function() {
 				$('#map').width('100%');
@@ -82,10 +80,12 @@
 				// 지도의 우측에 확대 축소 컨트롤을 추가한다
 				map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
 				
+				
 				// 매장 지도 표시
-				viewStore = function(x, y, title) {
+				viewStore = function(coords, title) {
+					
 					// 마커 이미지의 주소
-					var markerImageUrl = '../resources/images/common/map_pin_02.png', 
+					var markerImageUrl = '<c:url value="resources/images/common/map_pin_02.png"/>', 
 					    markerImageSize = new daum.maps.Size(46, 55), // 마커 이미지의 크기
 					    markerImageOptions = { 
 					        offset : new daum.maps.Point(23, 55)// 마커 좌표에 일치시킬 이미지 안의 좌표
@@ -96,14 +96,14 @@
 					
 					// 지도에 마커를 생성하고 표시한다
 					var marker = new daum.maps.Marker({
-					    position: new daum.maps.LatLng(y, x), // 마커의 좌표
+					    position: coords, // 마커의 좌표
 					    image : markerImage, // 마커의 이미지
 					    map: map, // 마커를 표시할 지도 객체
 					    title: title
 					});
 					
 					// 매장좌표로 지도 이동
-					map.setCenter(new daum.maps.LatLng(y, x));
+					map.setCenter(coords);
 				}
 				
 				return {
@@ -112,7 +112,7 @@
 			}
 			var mapFunc = daumMap();
 			
-		</script>
+		</script> -->
 
 	</div>
 	<p class="button_area mt30">
@@ -121,8 +121,21 @@
 </section>
 <!-- //contents -->
 <script>
+	//주소-좌표 변환 객체 생성
+	var geocoder = new daum.maps.services.Geocoder();
+	
+	geocoder.addressSearch('${sdto.address}', function(result, status) {
+	
+	    // 정상적으로 검색이 완료됐으면 
+	     if (status === daum.maps.services.Status.OK) {
+	    	 
+	        var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+	        
+			mapFunc.viewStore(coords,'${sdto.name}');
+	    } 
+	    
+	});
 	//매장 좌표 지도 표시
-	mapFunc.viewStore('126.9448742','37.5140898','\uB178\uB7C9\uC9C4\uC810');
 </script>
 
 </html>

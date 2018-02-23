@@ -36,7 +36,7 @@ public class StoreController {
 		StoreDto sdto = service.selectOne((String)map.get("no"));
 		model.addAttribute("sdto", sdto);
 		
-		return null;
+		return "store/detail.tile";
 	}
 	
 }

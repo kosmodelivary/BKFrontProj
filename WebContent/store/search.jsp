@@ -117,7 +117,7 @@
 								<p class="t_blue">개점</p> <%-- </c:if> --%>
 							</td>
 							<td><a class="button h25 btn_white w60"
-								href="<c:url value='/store/Detail.whpr?'/>">상세보기</a></td>
+								href="<c:url value='/store/Detail.whpr?no=${item.no }'/>">상세보기</a></td>
 						</tr>
 					</c:forEach>
 				</c:if>
