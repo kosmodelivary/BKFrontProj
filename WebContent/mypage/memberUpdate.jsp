@@ -3,12 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
-	<div id="wrap">
-		<!-- header -->
-		<jsp:include page="/template/Top.jsp" />
-		<!-- //header -->
-		<!-- main -->
-		<div id="container">
 			<!-- lnb -->
 			<aside id="lnb">
 				<h1>
@@ -16,10 +10,10 @@
 				</h1>
 				<nav>
 					<ul>
-						<li><a href="/mypage/memberUpdate">내 정보수정</a></li>
+						<li><a href="<c:url value='/mypage/memberUpdate.whpr'/>">내 정보수정</a></li>
 						<li><a href="/mypage">내 주문내역</a></li>
-						<li><a href="/mypage/passwordUpdate">비밀번호 변경</a></li>
-						<li><a href="/mypage/memberWithdraw">회원탈퇴</a></li>
+						<li><a href="<c:url value='/mypage/passwordUpdate.whpr'/>">비밀번호 변경</a></li>
+						<li><a href="<c:url value='/mypage/memberWithdraw.whpr'/>">회원탈퇴</a></li>
 					</ul>
 				</nav>
 			</aside>
@@ -165,12 +159,5 @@
 
 				}());
 			</script>
-		</div>
-		<!-- //contents -->
-		<!-- //main -->
-		<!-- footer -->
-		<jsp:include page="/template/Footer.jsp" />
-		<!-- //footer -->
-	</div>
 </body>
 </html>
