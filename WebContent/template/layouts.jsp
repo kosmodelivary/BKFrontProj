@@ -60,8 +60,10 @@
 	<div id="wrap">
 		<tiles:insertAttribute name="top"/>
 		<div id="container">
-		<tiles:insertAttribute name="body"/>
+			<tiles:insertAttribute name="body"/>
 		</div>
+		<div></div>
+		<tiles:insertAttribute name="footer"/>
 	</div>
 </body>
 </html>

@@ -12,7 +12,7 @@
 			
 		</definition>
 		
-		<definition name="/member/*.tile" extends="layouts">
+		<definition name="*.tile" extends="layouts">
 			
 			<put-attribute name="body" value="/member/{1}.jsp"/>
 			

@@ -2,12 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-		<!-- header -->
-		<jsp:include page="/template/Top.jsp"/>
-		<!-- //header -->
-		
-			<div id="container">
-			
 		<!-- lnb -->
 		<aside id="lnb">
 		<h1><img src="<c:url value='/resources/images/common/tit_members.png'/>" alt="버거킹 회원" /></h1>
@@ -209,11 +203,4 @@
 				
 			}());
 		</script>
-	</div>
-			<div></div>
-		<!-- footer -->
-		<jsp:include page="/template/Footer.jsp"/>
-		<!-- //footer -->
-		</div>
-	</body>
 </html>
