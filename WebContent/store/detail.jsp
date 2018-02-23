@@ -112,7 +112,7 @@
 			}
 			var mapFunc = daumMap();
 			
-		</script> -->
+		</script>
 
 	</div>
 	<p class="button_area mt30">
