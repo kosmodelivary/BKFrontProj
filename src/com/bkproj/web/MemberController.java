@@ -9,18 +9,18 @@ public class MemberController {
 	@RequestMapping("/member/searchIdPassword.whpr")
 	public String searchIDPW() throws Exception{
 		
-		return "searchIdPassword.tile";
+		return "member/searchIdPassword.tile";
 	}
 	
 	@RequestMapping("/member/joinAgree.whpr")
 	public String join() throws Exception{
 		
-		return "joinAgree.tile";
+		return "member/joinAgree.tile";
 	}
 	
 	@RequestMapping("/member/login.whpr")
 	public String login() throws Exception{
 		
-		return "login.tile";
+		return "member/login.tile";
 	}
 }

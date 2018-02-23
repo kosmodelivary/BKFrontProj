@@ -13,15 +13,15 @@
 		</definition>
 		
 		<definition name="*.tile" extends="layouts">
-			
-			<put-attribute name="body" value="/member/{1}.jsp"/>
-			
+			<put-attribute name="body" value="/{1}.jsp"/>
 		</definition>
 		
 		<definition name="*/*.tile" extends="layouts">
-			<put-attribute name="body" value="/member/{1}/{2}.jsp"/>
+			<put-attribute name="body" value="/{1}/{2}.jsp"/>
 		</definition>
+		
 		<definition name="*/*/*.tile" extends="layouts">
-			<put-attribute name="body" value="/member/{1}/{2}/{3}.jsp"/>
+			<put-attribute name="body" value="/{1}/{2}/{3}.jsp"/>
 		</definition>
+		
 </tiles-definitions>

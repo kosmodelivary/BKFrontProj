@@ -1,12 +1,14 @@
 package com.bkproj.web;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bkproj.service.StoreDto;
 import com.bkproj.service.impl.StoreServiceImpl;
@@ -25,12 +27,14 @@ public class StoreController {
 		
 		model.addAttribute("store", records);
 		
-		return "store/search";
+		return "store/search.tile";
 	}
 	
 	@RequestMapping("/store/Detail.whpr")
-	public String view() throws Exception
+	public String view(@RequestParam Map map,Model model) throws Exception
 	{
+		StoreDto sdto = service.selectOne((String)map.get("no"));
+		model.addAttribute("sdto", sdto);
 		
 		return null;
 	}
