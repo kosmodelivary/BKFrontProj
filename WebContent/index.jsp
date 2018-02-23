@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+<body>
 	<div id="wrap" class="main">
 	<!-- header -->
 	<jsp:include page="/template/Top.jsp"/>
