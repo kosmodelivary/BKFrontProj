@@ -11,4 +11,16 @@ public class MemberController {
 		
 		return "member/searchIdPassword";
 	}
+	
+	@RequestMapping("/member/joinAgree.whpr")
+	public String join() throws Exception{
+		
+		return "member/joinAgree";
+	}
+	
+	@RequestMapping("/member/login.whpr")
+	public String login() throws Exception{
+		
+		return "member/login";
+	}
 }

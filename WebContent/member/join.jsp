@@ -8,9 +8,19 @@
 		
 			<div id="container">
 			
-		<!-- left -->
-		<jsp:include page="/template/Left.jsp"/>
-		<!-- //left -->
+		<!-- lnb -->
+		<aside id="lnb">
+		<h1><img src="<c:url value='/resources/images/common/tit_members.png'/>" alt="버거킹 회원" /></h1>
+		<nav>
+			<ul>
+				<li><a href="<c:url value='/member/login.whpr'/>">로그인</a></li>
+				<li><a href="<c:url value='/member/joinAgree.whpr'/>">회원가입</a></li>
+				<li><a href="<c:url value='/member/searchIdPassword.whpr'/>">아이디/비밀번호 찾기</a></li>
+				<li><a href="/order/nonMemberOrder">비회원주문</a></li>
+			</ul>
+		</nav>
+	</aside>
+		<!-- //lnb -->
 		
 		<!-- contents -->
 		<section id="contents">
@@ -81,6 +91,26 @@
 						</div>								
 					</li>
 				</ul>	
+			</div>
+			
+			<div class="form_list">
+				<h3 class="cont_tit tit3">비번 찾기 질문</h3>
+				<ul>
+					<li>
+						<div class="inp_wid"><i>*</i>
+							<select class="select" title="비번 찾기 질문 선택" id="quiz">
+								<option value="fastfood">자주 가는 패스트푸드점은?</option>
+								<option value="travel">꼭 가보고 싶은 여행지는?</option>
+								<option value="song">가장 좋아하는 노래는?</option>
+								<option value="island">무인도에 가지고 가고 싶은 것은?</option>
+								<option value="tomb">죽은 뒤에 새기고 싶은 묘비명은?</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="inp_wid"><i>*</i><input type="text" name="answer" id="answer" class="input" placeholder="비번 찾기 정답 입력" title="비번 찾기 정답 입력" maxlength="20" /></div>
+					</li>
+				</ul>
 			</div>
 
 			<div class="form_list">	
