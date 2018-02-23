@@ -10,6 +10,7 @@ public class StoreDto {
 	private int 	weekdayoff;
 	private int 	weekendon;
 	private int 	weekendoff;
+	private int		minordermoney;
 	
 	//---------------------------------------------------
 	// getter / setter
@@ -62,6 +63,10 @@ public class StoreDto {
 	public void setWeekendoff(int weekendoff) {
 		this.weekendoff = weekendoff;
 	}
-
-	
+	public int getMinordermoney() {
+		return minordermoney;
+	}
+	public void setMinordermoney(int minordermoney) {
+		this.minordermoney = minordermoney;
+	}
 } // end StoreDto 

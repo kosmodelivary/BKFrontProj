@@ -23,7 +23,7 @@
 			<!-- contents -->
 			<section id="contents">
 				<ul id="location">
-					<li><a class="home" href="/index.jsp">HOME</a></li>
+					<li><a class="home" href="/home.whpr">HOME</a></li>
 					<li><span>STORE</span></li>
 					<li><strong>배달매장찾기</strong></li>
 				</ul>
@@ -101,23 +101,34 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<!-- 매장이름 -->
-								<td>??점</td>
-								<!-- 매장주소 -->
-								<td>??시 ??구 ??로 ?</td>
-								<!-- 최소주문가격 -->
-								<td>8,000원</td>
-								<td>
-									<!-- 개/폐점 시간 -->
-									<p>주중 : ??:??~??:??</p>
-									<p>주말 : ??:??~??:??</p>
-									<!-- 서버시간과 매점개폐시간에 맞춰 이프문으로 개점 폐점 분기. -->
-									<p class="t_blue">개점</p>
-								</td>
-								<td><a class="button h25 btn_white w60"
-									href="/store/detail?aBranchId=글(매장)번호">상세보기</a></td>
-							</tr>
+							<c:if test="${empty store }" var="flag">
+								<tr>
+				   					<td colspan="6">등록된 자료가 없습니다.</td>
+				   				</tr>
+							</c:if>
+							<c:if test="${not flag }">
+								<c:forEach var="item" items="${store }" varStatus="loop">
+									<tr>
+										<!-- 매장이름 -->
+										<td>${item.name }</td>
+										<!-- 매장주소 -->
+										<td>${item.address }</td>
+										<!-- 최소주문가격 -->
+										<td>${item.minordermoney }</td>
+										<td>
+											<!-- 개/폐점 시간 -->
+											<p>주중 : ${item.weekdayon }:00~${item.weekdayoff }:00</p>
+											<p>주말 : ${item.weekendon }:00~${item.weekendoff }:00</p>
+											<!-- 서버시간과 매점개폐시간에 맞춰 이프문으로 개점 폐점 분기. -->
+											<%-- <c:if > --%>
+											<p class="t_blue">개점</p>
+											<%-- </c:if> --%>
+										</td>
+										<td><a class="button h25 btn_white w60"
+											href="<c:url value='/store/Detail.whpr?'/>">상세보기</a></td>
+									</tr>
+								</c:forEach>
+							</c:if>
 						</tbody>
 					</table>
 
