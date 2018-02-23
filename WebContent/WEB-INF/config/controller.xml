@@ -28,5 +28,13 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
+	<!-- tile bean -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/template/layouts.xml</value>
+			</list>
+		</property>
+	</bean>
 
 </beans>

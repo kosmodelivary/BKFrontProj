@@ -8,9 +8,19 @@
 			
 			<div id="container">
 			
-		<!-- left -->
-		<jsp:include page="/template/Left.jsp"/>
-		<!-- //left -->
+		<!-- lnb -->
+		<aside id="lnb">
+		<h1><img src="<c:url value='/resources/images/common/tit_members.png'/>" alt="버거킹 회원" /></h1>
+		<nav>
+			<ul>
+				<li><a href="<c:url value='/member/login.whpr'/>">로그인</a></li>
+				<li><a href="<c:url value='/member/joinAgree.whpr'/>">회원가입</a></li>
+				<li><a href="<c:url value='/member/searchIdPassword.whpr'/>">아이디/비밀번호 찾기</a></li>
+				<li><a href="/order/nonMemberOrder">비회원주문</a></li>
+			</ul>
+		</nav>
+	</aside>
+		<!-- //lnb -->
 
 		<!-- contents -->
 		<section id="contents">
@@ -56,38 +66,14 @@
 
 				<ul class="comment_list mt50">
 					<li>회원님의 가입 시 입력한 이름과 휴대폰번호로 가입 시 사용한 아이디 정보를 찾을 수 있습니다.</li>
-					<li>비밀번호 찾기 시 휴대폰번호 및 이메일로 발송 됩니다.</li>
-					<li>발급된 비밀번호는 임시 비밀번호이니 꼭 마이페이지 내 개인정보수정으로 비밀번호를 변경해주세요.</li>
+					<li>가입 시 입력한 비밀번호 찾기 질문과 답으로 비밀번호를 재설정할 수 있습니다.</li>
 				</ul>
 			</div>
 		
 			<!-- 비밀번호 찾기	 -->	
 			<div id="tab2" class="tab_cont">
-				<section class="find_pw">
-					<h2 class="cont_tit tit3">EMAIL 주소로 비밀번호 재설정</h2>
-					<p class="find_radio">
-						<!--<label class="radio">
-								<input name="findRdo" type="radio" value="phone" checked="checked" />
-								<span class="lbl">휴대폰 인증</span>
-							</label>-->
-						<label class="radio">
-							<input name="findRdo" type="radio" value="mail" checked="checked" />
-							<span class="lbl">이메일 발송</span>
-						</label>				
-					</p>
-					
-					<div id="phone" class="hide">
-						<div class="find_phone">
-							<p>
-								<a href="#" class="button btn_gray">휴대폰인증</a>
-							</p>
-						</div>								
-						<hr />								
-						<ul class="comment_list">
-							<li>회원 가입 시 입력한 이름과 휴대폰번호로 인증 후 임시비밀번호를 발송됩니다.</li>							
-						</ul>
-					</div>
-
+				<section class="find_pw boxStyle">
+					<h2 class="cont_tit tit3">비밀번호 찾기 질문으로 비밀번호 재설정</h2>
 					<div id="mail">
 						<div class="find_mail">
 							<div class="inp_wid"><input type="text" class="input" size="35" id="custName" placeholder="이름" title="이름 입력" maxlength="10" /></div>
@@ -104,17 +90,34 @@
 								</select>
 							</div>
 							
+			<div>
+				<ul>
+					<li>
+						<div class="inp_wid mt10">
+							<select class="select" title="비번 찾기 질문 선택" id="quiz">
+								<option value="fastfood">자주 가는 패스트푸드점은?</option>
+								<option value="travel">꼭 가보고 싶은 여행지는?</option>
+								<option value="song">가장 좋아하는 노래는?</option>
+								<option value="island">무인도에 가지고 가고 싶은 것은?</option>
+								<option value="tomb">죽은 뒤에 새기고 싶은 묘비명은?</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="inp_wid mt10"><input type="text" name="answer" id="answer" class="input" placeholder="비번 찾기 정답 입력" title="비번 찾기 정답 입력" maxlength="20" /></div>
+					</li>
+				</ul>
+			</div>
+							
 							<p class="button_area pt20">
-								<a href="javascript:void(0);" class="button h50 btn_gray" id="searchPassword">이메일발송</a>
+								<a href="javascript:void(0);" class="button h50 btn_gray" id="searchPassword">비밀번호 재설정</a>
 							</p>
 						</div>
-						<hr />
-						<ul class="comment_list">
-							<li>회원 가입 시 입력한 이름과 이메일(아이디)로 임시비밀번호를 발송됩니다.</li>
-							<li>임시비밀번호로 로그인 후 마이페이지 > 내 정보수정에서 비밀번호 변경해주세요.</li>
-						</ul>
 					</div>						
-				</section>						
+				</section>
+						<ul class="comment_list mt50">
+							<li>회원 가입 시 입력한 비밀번호 찾기 질문과 답으로 비밀번호를 재설정합니다.</li>
+						</ul>
 			</div>
 		</section>
 		<!-- //contents -->
