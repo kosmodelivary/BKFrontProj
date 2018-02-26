@@ -61,10 +61,10 @@
 								<ul>
 									<li><a href="#">배달매장찾기</a></li>
 								</ul></li>
-							<li class="gnb05"><a href="#" class="in_sub">FAQ</a>
+							<li class="gnb05"><a href="<c:url value='/customer/faqList.whpr'/>" class="in_sub">FAQ</a>
 								<ul>
-									<li><a href="#">FQA</a></li>
-									<li><a href="#">공지사항</a></li>
+									<li><a href="<c:url value='/customer/faqList.whpr'/>">FAQ</a></li>
+									<li><a href="<c:url value='/customer/noticeList.whpr'/>">공지사항</a></li>
 								</ul></li>
 						</ul>
 					</nav>

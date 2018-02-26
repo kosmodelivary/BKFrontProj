@@ -5,11 +5,11 @@
 	<div class="foot_util">
 		<div class="inner">
 			<ul>
-				<li><a href="#">FAQ</a></li>
+				<li><a href="<c:url value='/customer/faqList.whpr'/>">FAQ</a></li>
 				<li><a href="#">이용약관</a></li>
 				<li><a href="#">개인정보처리방침</a></li>
 				<li><a href="#">사이트맵</a></li>
-				<li><a href="#">공지사항</a></li>
+				<li><a href="<c:url value='/customer/noticeList.whpr'/>">공지사항</a></li>
 				<!-- <li><a href="#">사이버상담실</a></li> -->
 				<!-- <li><a href="#">법적고지</a></li> -->
 				<!-- <li><a href="#">브랜드사이트</a></li> -->
