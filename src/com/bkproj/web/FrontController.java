@@ -10,7 +10,7 @@ public class FrontController {
 	public String menu() throws Exception
 	{
 		
-		return "menu/All";
+		return "menu/All.tile";
 	}
 	
 	@RequestMapping("/home.whpr")
