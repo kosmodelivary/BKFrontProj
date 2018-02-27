@@ -6,8 +6,8 @@
 		<div class="inner">
 			<ul>
 				<li><a href="<c:url value='/customer/faqList.whpr'/>">FAQ</a></li>
-				<li><a href="#">이용약관</a></li>
-				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="<c:url value='/etc/terms.whpr'/>">이용약관</a></li>
+				<li><a href="<c:url value='/etc/privacy.whpr'/>">개인정보처리방침</a></li>
 				<li><a href="#">사이트맵</a></li>
 				<li><a href="<c:url value='/customer/noticeList.whpr'/>">공지사항</a></li>
 				<!-- <li><a href="#">사이버상담실</a></li> -->
